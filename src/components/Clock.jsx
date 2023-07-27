@@ -19,9 +19,11 @@ class Clock extends React.Component{
         clearInterval(this.clockTimer)
     }
     render(){
+        const {date}=this.state;
+        const {locale}=this.props;
         return (
             <h1 className="heading">
-                <span className="text">Hello {this.state.date.toLocaleTimeString()}</span>
+                <span className="text">Hello {date.toLocaleTimeString(locale)}</span>
             </h1>
         )
     }
