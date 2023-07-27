@@ -1,14 +1,8 @@
 import React from "react"
-import { ReactDOM } from "react"
+import Clock from "./components/Clock"
 
-class App extends React.Component{
-    render(){
-        return (
-            <h1 className="heading">
-                <span className="text">Hello {new Date().toLocaleTimeString(this.props.locale)}</span>
-            </h1>
-        )
-    }
+function App(){
+    return <Clock/>
 }
 
 export default App
