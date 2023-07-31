@@ -1,8 +1,9 @@
 import React from "react"
-import Clock from "./components/Clock"
+import ClassList from "./components/ClassList"
 
+let quantities=[1,2,3];
 function App(){
-    return <Clock/>
+    return <ClassList quantities={quantities}/>
 }
 
 export default App
