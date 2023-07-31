@@ -1,11 +1,8 @@
-import React from "react";
-import Form from "./Component/Form"
+import React from "react"
+import Clock from "./components/Clock"
+
 function App(){
-    return (
-        <div>
-            <Form/>
-        </div>
-    )
-};
+    return <Clock/>
+}
 
 export default App
