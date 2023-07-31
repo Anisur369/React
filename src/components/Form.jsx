@@ -8,7 +8,10 @@ class Form extends React.Component{
         isAwesome:true,
     }
     handleChange=(e)=>{
-        if(e.target.type=="text"){
+        this.setState({
+            [e.target.name]:e.target.value,
+        })
+        /* if(e.target.type=="text"){
             this.setState({
                 title:e.target.value,
             })
@@ -26,7 +29,7 @@ class Form extends React.Component{
             })
         }else{
             console.log("no value & text")
-        }
+        } */
     }
     submitHandler=(e)=>{
         e.preventDefault();
@@ -39,13 +42,16 @@ class Form extends React.Component{
         return (
             <div>
                 <form onSubmit={this.submitHandler}>
-                    <input type="text" placeholder="Enter title" value={title} onChange={this.handleChange}/>
+                    <input name="title" type="text" placeholder="Enter title" value={title} onChange={this.handleChange}/>
                     <br/>
                     <br/>
-                    <textarea value={text} onChange={this.handleChange}/>
+                    <textarea name="text" value={text} onChange={this.handleChange}/>
                     <br/>
                     <br/>
-                    <select value={library} onChange={this.handleChange}>
+                    <input type="text" value={null}/>
+                    <br/>
+                    <br/>
+                    {/* <select value={library} onChange={this.handleChange}>
                         <option value="React">React</option>
                         <option value="javascript">javascript</option>
                         <option value="Angular">Angular</option>
@@ -55,7 +61,7 @@ class Form extends React.Component{
                     <br/>
                     <input type="checkbox" checked={isAwesome} onChange={this.handleChange}/>
                     <br/>
-                    <br/>
+                    <br/> */}
                     <input type="submit" value={"submit"}/>
                 </form>
             </div>
