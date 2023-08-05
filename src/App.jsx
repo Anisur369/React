@@ -1,9 +1,9 @@
 import React from "react"
-import Form from "./components/Form"
+import Calclator from "./components/Calclator"
 
 
 function App(){
-    return <Form/>
+    return <Calclator/>
 }
 
 export default App
