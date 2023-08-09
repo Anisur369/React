@@ -1,5 +1,5 @@
 import React from "react";
-//import Boilingverdict from "./BoilingVerdict";
+import Boilingverdict from "./BoilingVerdict";
 import TemperatureInput from "./TemperatureInput";
 
 class Calclator extends React.Component{
@@ -8,14 +8,16 @@ class Calclator extends React.Component{
     }
     onTemperatureChange=(e)=>{
         this.setState({
-            temperature:e.target.value
+            temperature:Number(e.target.value)
         })
     }
     render(){
+        const {temperature}=this.state;
         return (
             <div>
-                <TemperatureInput scale={'c'}/>
-                <TemperatureInput scale={'f'}/>
+                <TemperatureInput onTemp={this.onTemperatureChange} temperature={temperature} scale={'c'}/>
+                <TemperatureInput onTemp={this.onTemperatureChange}  temperature={temperature} scale={'f'}/>
+                <Boilingverdict celsius={temperature}/>
             </div>
         )
     }

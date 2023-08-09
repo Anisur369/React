@@ -5,13 +5,12 @@ const scaleNames={
 }
 class TemperatureInput extends React.Component{
     render(){
-        //const {Boilingverdict}=this.props;
-        const {scale}=this.props;
+        const {scale,temperature,onTemp}=this.props;
         return (
             <div>
                 <fieldset>
                     <legend>Enter temperture in {scaleNames[scale]}:</legend>
-                    <input type="text" value={temperature} onChange={this.onTemperatureChange}/>
+                    <input type="text" value={temperature} onChange={onTemp}/>
                 </fieldset>
             </div>
         )
