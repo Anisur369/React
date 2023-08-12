@@ -9,7 +9,7 @@ class Calclator extends React.Component{
     }
     onTemperatureChange=(e,scale)=>{
         this.setState({
-            temperature:Number(e.target.value),
+            temperature:e.target.value,
             scale,
         })
     }
@@ -21,7 +21,7 @@ class Calclator extends React.Component{
             <div>
                 <TemperatureInput onTemperatureChange={this.onTemperatureChange} temperature={celsius} scale={'c'}/>
                 <TemperatureInput onTemperatureChange={this.onTemperatureChange}  temperature={fahrenheit} scale={'f'}/>
-                <Boilingverdict celsius={temperature}/>
+                <Boilingverdict celsius={celsius} fahrenheit={fahrenheit}/>
             </div>
         )
     }
