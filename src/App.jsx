@@ -1,9 +1,9 @@
 import React from "react"
-import Calclator from "./components/Calclator"
+import Text from "./components/inheritance/Text"
 
 
 function App(){
-    return <Calclator/>
+    return <Text/>
 }
 
 export default App
