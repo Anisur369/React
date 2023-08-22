@@ -1,9 +1,14 @@
 import React from "react"
-import Text from "./components/inheritance/Text"
+import Emoji from "./components/composition/Emoji";
+import Text from "./components/composition/Text";
 
 
 function App(){
-    return <Text/>
+    return (
+        <Emoji>
+            {({addEmoji})=>{return <Text addEmoji={addEmoji}/>}}
+        </Emoji>
+    )
 }
 
 export default App
