@@ -1,28 +1,11 @@
-import React from "react"
-import Emoji from "./components/composition/Emoji";
-import Bracket from "./components/composition/Bracket";
-import Text from "./components/composition/Text";
-
+import React from "react";
+import ClickCounter from "./components/ClickCounter";
 
 function App(){
     return (
-        <div>
-        <Emoji>
-            {({addEmoji})=>
-            <Bracket>
-                {({addBracket})=><Text addEmoji={addEmoji} addBracket={addBracket}/>}
-            </Bracket>}
-        </Emoji>
-        <br/>
-        <br/>
-
-        <Emoji>
-            {({addBracket})=><Text addBracket={addBracket}/>}
-        </Emoji>
-
-
+        <div className="app">
+            <ClickCounter/>
         </div>
     )
 }
-
-export default App
+export default App;
