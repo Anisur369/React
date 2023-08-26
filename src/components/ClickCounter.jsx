@@ -11,7 +11,7 @@ class ClickCounter extends React.Component{
         const {count}=this.state;
         return(
             <div>
-                <button type="button" onMouseOver={this.incrementCount}>Clicked {count} times</button>
+                <button type="button" onClick={this.incrementCount}>Clicked {count} times</button>
             </div>
         )
     }
