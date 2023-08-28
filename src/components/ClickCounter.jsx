@@ -1,5 +1,17 @@
 import React from "react";
+import withCounter from "./HOC/withCounter";
 
+let ClickCounter=(props)=>{
+    const {count,incrementCount}=props;
+    return (
+        <div>
+            <button onClick={incrementCount}>Clicked {count} times</button>
+        </div>
+    )
+}
+
+export default withCounter(ClickCounter);
+/* 
 class ClickCounter extends React.Component{
     state={
         count:0
@@ -11,9 +23,10 @@ class ClickCounter extends React.Component{
         const {count}=this.state;
         return(
             <div>
-                <button type="button" onMouseOver={this.incrementCount}>Clicked {count} times</button>
+                <button type="button" onClick={this.incrementCount}>Clicked {count} times</button>
             </div>
         )
     }
 }
 export default ClickCounter;
+ */
