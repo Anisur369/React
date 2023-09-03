@@ -7,8 +7,12 @@ import Counter from "./components/HOC/Counter";
 function App(){
     return (
         <div className="app">
-            <Counter render={(count,incrementCount)=><ClickCounter count={count} incrementCount={incrementCount}/>}/>
-            <Counter render={(count,incrementCount)=><HoverCounter count={count} incrementCount={incrementCount}/>}/>
+            <Counter>
+                {(count,incrementCount)=><ClickCounter count={count} incrementCount={incrementCount}/>}
+            </Counter>
+            <Counter>
+                {(count,incrementCount)=><HoverCounter count={count} incrementCount={incrementCount}/>}
+            </Counter>
         </div>
     )
 }
