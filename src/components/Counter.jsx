@@ -10,9 +10,9 @@ class Counter extends React.Component{
         )
     }
     render(){
-        const {children}=this.props;
+        const {render}=this.props;
         const {count}=this.state;
-        return children(count,this.incrementCount)
+        return render(count,this.incrementCount)
     }
 }
 export default Counter;

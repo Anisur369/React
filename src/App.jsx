@@ -6,9 +6,7 @@ import ClickCounter from "./components/RenderProps/ClickCounter";
 function App(){
     return (
         <div>
-            <Counter>
-                {(count,incrementCount)=>(<ClickCounter count={count} incrementCount={incrementCount}/>)}
-            </Counter>
+            <Counter render={(count,incrementCount)=>(<ClickCounter count={count} incrementCount={incrementCount}/>)}/>
         </div>
     )
 }
