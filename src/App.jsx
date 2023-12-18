@@ -19,7 +19,6 @@ class App extends React.Component{
                 <themeContext.Provider value={{theme}}>
                     <Section/>
                 </themeContext.Provider>
-                
             </div>
         )
     }
