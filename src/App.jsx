@@ -22,8 +22,6 @@ class App extends React.Component{
             }
         })
     }
-
-
     render(){
         const {theme}=this.state;
         return (
