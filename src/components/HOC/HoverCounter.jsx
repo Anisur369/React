@@ -10,10 +10,10 @@ export default function HoverCounter({count,incrementCount,theme,switchTheme}){
         style=null
     }
     return (
-    <div>
-        <h1 onMouseOver={incrementCount} style={style}>Heading {count} line</h1>
-        <button type="button" onClick={switchTheme}>Change Theme</button>
-    </div>
+        <div>
+            <h1 onMouseOver={incrementCount} style={style}>Heading {count} line</h1>
+            <button type="button" onClick={switchTheme}>Change Theme</button>
+        </div>
     
     )
 }
