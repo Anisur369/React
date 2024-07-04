@@ -6,7 +6,7 @@ import { useContext } from "react";
 
 export default class Content extends React.Component{
     render(){
-        const {theme,switchTheme}=this.props;
+        const {theme,switchTheme}=this.context;
         return(
             <div>
                 <h1>This is a HoverCounter</h1>
