@@ -7,6 +7,7 @@ import { useContext } from "react";
 export default function Content(){
     const context=useContext(themeContext);
     const {theme,switchTheme}=context;
+    console.log('Content Theme')
     return(
         <div>
             <h1>This is a HoverCounter</h1>
