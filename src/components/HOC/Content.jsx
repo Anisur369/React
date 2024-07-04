@@ -2,7 +2,6 @@ import React from "react";
 import Counter from "./Counter";
 import HoverCounter from "./HoverCounter";
 import themeContext from "../../Contexts/themeContext";
-import { useContext } from "react";
 
 export default class Content extends React.Component{
     render(){
