@@ -1,9 +1,9 @@
 import React from "react"
-import ClassList from "./components/ClassList"
+import Todo from "./components/Todo";
 
-let quantities=[1,2,3];
 function App(){
-    return <ClassList quantities={quantities}/>
+    return (<div>
+        <Todo/>
+    </div>)
 }
-
-export default App
+export default App;
