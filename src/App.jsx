@@ -1,11 +1,11 @@
 import React from "react";
-import MyComponentClass from "./components/MyComponentClass";
+import MyComponent from "./components/MyComponent";
 
 function App(){
     return (
         <div className="app">
             <div>We shall learn useEffect() today</div>
-            <MyComponentClass></MyComponentClass>
+            <MyComponent></MyComponent>
         </div>
     )
 }
