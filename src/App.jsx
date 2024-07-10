@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import MyComponent from "./components/MyComponent";
 
 function App(){
+    const [show,setShow]=useState(true);
+    let Change=()=>{
+        setShow((prevShow)=>!prevShow)
+    }
+
     return (
         <div className="app">
-            <div>We shall learn useEffect() today</div>
-            <MyComponent></MyComponent>
+            <div>{show && <MyComponent></MyComponent>}</div>
+            <p>
+                <button type="button" onClick={Change}>
+                    {show ? 'Hide post':'Show post'}
+                </button>
+            </p>
         </div>
     )
 }

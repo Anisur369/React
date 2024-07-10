@@ -9,15 +9,16 @@ function MyComponent(){
         setCount((prevState)=>(prevState+1))
     };
     useEffect(()=>{
-        console.log('updating document title')
-        document.title=`Clicked ${count} times`
+        document.title=`Clicked ${count} times`;
     },[count])
     const tick=()=>{
+        console.log('hello')
         setDate(new Date())
     };
     useEffect(()=>{
-        setInterval(tick,1000);
-    })
+        const interval=setInterval(tick,1000);
+        return ()=>clearInterval(interval)
+    },[])
 
     return (
         <div>
