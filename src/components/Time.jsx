@@ -9,6 +9,8 @@ function Time(){
     const addClick=()=>{
         setCount((prevState)=>(prevState+1))
     };
+    // const addTime=()=>
+    //     setDate
     useEffect(()=>{
         document.title=`Clicked ${count} times`;
     },[count]); 
@@ -31,6 +33,7 @@ function Time(){
                 <button type="button" onClick={addClick}>Click</button>
             </p>
             <button type="button" onClick={()=>clearInterval(buttonRef.current)}>Stop Time</button>
+            <button type="button" onClick={()=>buttonRef.current=setInterval(tick,1000)}>Start Time</button>
         </div>
     )
 }
