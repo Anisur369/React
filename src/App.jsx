@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
-import Form from "./components/Form";
+import Time from "./components/Time";
 
 function App(){
     return (
         <div className="app">
             <div>
-                <Form/>
+                <Time/>
             </div>
         </div>
     )
