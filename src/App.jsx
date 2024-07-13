@@ -10,11 +10,11 @@ function App(){
     return (
         <div className="app">
             <div>{show && <MyComponent></MyComponent>}</div>
-            <p>
+            <div>
                 <button type="button" onClick={Change}>
                     {show ? 'Hide post':'Show post'}
                 </button>
-            </p>
+            </div>
         </div>
     )
 }

@@ -19,7 +19,6 @@ function MyComponent(){
         const interval=setInterval(tick,1000);
         return ()=>clearInterval(interval)
     },[])
-
     return (
         <div>
             <p>Time: {date.toLocaleTimeString()} </p>
