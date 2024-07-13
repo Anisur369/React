@@ -1,9 +1,29 @@
-import React from "react"
-import ClassList from "./components/ClassList"
+import React, { useState,useCallback } from "react";
+import Title from "./components/Title";
+import ShowCount from "./components/ShowCount";
+import Button from "./components/Button";
 
-let quantities=[1,2,3];
 function App(){
-    return <ClassList quantities={quantities}/>
+    const [count1,setCount1]=useState(0);
+    const [count2,setCount2]=useState(0);
+    
+    const incrementByOne=useCallback(
+        ()=>{setCount1((prevCount)=>prevCount+1)}
+    ,[])
+    const incrementByFive=useCallback(
+        ()=>{
+            setCount2((prevCount)=>prevCount+5);
+        }
+    ,[])
+    return (
+        <div className="app">
+            <Title/>
+            <ShowCount count={count1} title="Counter 1"/>
+            <Button handleClick={incrementByOne}>Increment by one</Button>
+            <hr/>
+            <ShowCount count={count2} title="Counter 5"/>
+            <Button handleClick={incrementByFive}>Increment by five</Button>
+        </div>
+    )
 }
-
-export default App
+export default App;
