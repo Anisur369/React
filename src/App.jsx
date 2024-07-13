@@ -8,13 +8,13 @@ function App(){
     const [count2,setCount2]=useState(0);
     
     const incrementByOne=useCallback(
-        ()=>{setCount1((prevCount)=>prevCount+1)}
-    ,[])
+        ()=>{setCount1(count1+1)}
+    ,[count1])
     const incrementByFive=useCallback(
         ()=>{
-            setCount2((prevCount)=>prevCount+5);
+            setCount2(count2+5);
         }
-    ,[])
+    ,[count2])
     return (
         <div className="app">
             <Title/>
