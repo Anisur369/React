@@ -1,12 +1,9 @@
-import { useEffect, useRef } from "react";
-import Time from "./components/Time";
+import Counter from "./components/Counter"
 
 function App(){
     return (
         <div className="app">
-            <div>
-                <Time/>
-            </div>
+            <Counter/>
         </div>
     )
 }
