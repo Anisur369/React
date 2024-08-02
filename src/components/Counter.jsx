@@ -1,26 +1,30 @@
-import { useReducer } from "react";
+import { createContext, useReducer } from "react";
+import ComponentC from "./ComponentC";
 
-const inatialvalue={count:5};
-const reduce=(state,action)=>{
-    switch (action.type) {
+export const newContext=createContext();
+const initialState=0;
+const reducer=(state,action)=>{
+    switch (action){
         case 'increment':
-            return {...state,count:state.count+action.value}  
+            return state+1;
         case 'decrement':
-            return {...state,count:state.count-action.value}           
-            break;
-    
+            return state-1;
         default:
-            return {...state,count:state.count};
+            return state;
     }
 }
-
 function Counter(){
-    const [count,dispatch]=useReducer(reduce,inatialvalue);
+    const [count,dispatch]=useReducer(reducer,initialState)
     return (
         <div>
-            <div>counter - {count.count}</div>
-            <button onClick={()=>dispatch({type:'increment',value:1})}>Increment</button>
-            <button onClick={()=>dispatch({type:'decrement',value:1})}>Decrement</button>
+            <div>Count - {count}</div>
+            <button type="button" onClick={()=>dispatch('increment')}>Increment</button>
+            <button type="button" onClick={()=>dispatch('decrement')}>Decrement</button>
+            <div>Count - {count}</div>
+            <newContext.Provider value={{count,dPath:dispatch}}>
+                <ComponentC/>
+            </newContext.Provider>
+            
         </div>
     )
 }
