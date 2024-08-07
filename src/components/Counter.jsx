@@ -17,10 +17,6 @@ function Counter(){
     const [count,dispatch]=useReducer(reducer,initialState)
     return (
         <div>
-            <div>Count - {count}</div>
-            <button type="button" onClick={()=>dispatch('increment')}>Increment</button>
-            <button type="button" onClick={()=>dispatch('decrement')}>Decrement</button>
-            <div>Count - {count}</div>
             <newContext.Provider value={{count,dPath:dispatch}}>
                 <ComponentC/>
             </newContext.Provider>
