@@ -1,4 +1,4 @@
-const {useReducer}=React()
+import { useReducer } from "react";
 
 const countValue=0;
 const redue=(state,action)=>{
