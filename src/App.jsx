@@ -1,9 +1,9 @@
-import Counter from "./components/Counter"
+import Getpost from "./components/GetPost";
 
 function App(){
     return (
         <div className="app">
-            <Counter/>
+            <Getpost/>
         </div>
     )
 }
