@@ -1,14 +1,14 @@
-import { useContext, useReducer } from "react";
-import { newContext } from "./Counter";
+import { useContext } from "react";
+import { counterContext } from "./Counter";
 
-
-function ComponentC(){
-    const updateContext=useContext(newContext)
+function ComponentC() {
+    const countContext=useContext(counterContext)
+    console.log(countContext)
     return (
         <div>
-            <div>Count - {updateContext.count}</div>
-            <button type="button" onClick={()=>updateContext.dPath('increment')}>Increment</button>
-            <button type="button" onClick={()=>updateContext.dPath('decrement')}>Decrement</button>
+            <h2>count- {countContext.count}</h2>
+            <button onClick={()=>countContext.dispatch('increment')}>increment</button>
+            <button onClick={()=>countContext.dispatch('decrement')}>decrement</button>
         </div>
     )
 }

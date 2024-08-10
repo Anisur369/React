@@ -1,13 +1,18 @@
-import { useReducer } from "react";
+import React from "react";
+import { createContext, useReducer } from "react";
+import ComponentC from "./ComponentC";
+import ComponentA from "./ComponentA";
 
-const countValue=0;
+export const counterContext=React.createContext();
+
+
+const countValue=5;
 const redue=(state,action)=>{
     switch (action) {
-        case increment:
-            return state+1
-        case decrement:
-            return state-1
-            break;    
+        case 'increment':
+            return state+1;
+        case 'decrement':
+            return state-1;    
         default:
             return state;
     }
@@ -15,11 +20,16 @@ const redue=(state,action)=>{
 
 function Counter(){
     const [count,dispatch]=useReducer(redue,countValue)
+    const [count2,dispatch2]=useReducer(redue,countValue)
     return (
         <div>
-            <p>count- {count}</p>
-            <button onClick={()=>dispatch('increment')}>increment</button>
-            <button onClick={()=>dispatch('decrement')}>decrement</button>
+            <counterContext.Provider value={{count2,dispatch2}}>
+                <ComponentA/>
+            </counterContext.Provider> 
+            
+            <counterContext.Provider value={{count,dispatch}}>
+                <ComponentC/>
+            </counterContext.Provider>            
         </div>
     )
 }

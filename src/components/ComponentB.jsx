@@ -1,7 +1,9 @@
 import ComponentC from "./ComponentC";
-function ComponentB() {
+function ComponentB({dispatch}){
     return (
-        <ComponentC/>
+        <div>
+            <ComponentC dispatch={dispatch}/>
+        </div>
     )
 }
 export default ComponentB;
