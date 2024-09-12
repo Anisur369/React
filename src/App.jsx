@@ -1,9 +1,9 @@
 import React from "react"
-import ClassList from "./components/ClassList"
+import Calclator from "./components/Calclator"
 
-let quantities=[1,2,3];
+
 function App(){
-    return <ClassList quantities={quantities}/>
+    return <Calclator/>
 }
 
 export default App
