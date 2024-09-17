@@ -1,9 +1,14 @@
 import React from "react"
-import ClassList from "./components/ClassList"
+import Counter from "./components/Counter";
+import ClickCounter from "./components/RenderProps/ClickCounter";
 
-let quantities=[1,2,3];
+
 function App(){
-    return <ClassList quantities={quantities}/>
+    return (
+        <div>
+            <Counter render={(count,incrementCount)=>(<ClickCounter count={count} incrementCount={incrementCount}/>)}/>
+        </div>
+    )
 }
 
 export default App
