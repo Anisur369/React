@@ -1,9 +1,9 @@
 import React from "react"
-import ClassList from "./components/ClassList"
+import Form from "./components/Form"
 
-let quantities=[1,2,3];
+
 function App(){
-    return <ClassList quantities={quantities}/>
+    return <Form/>
 }
 
 export default App
